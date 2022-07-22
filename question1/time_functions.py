@@ -7,7 +7,7 @@ def humanize_time(total_seconds: float) -> str:
 
     MAX_SECONDS = 60
     MAX_MILISECONDS = 1000
-    MAX_MICRO_SECONDS = 1000000
+    MAX_MICRO_SECONDS = 1000
 
     total_hours = total_seconds // ONE_HOUR_IN_SECONDS
     total_minutes = (total_seconds % ONE_HOUR_IN_SECONDS) // ONE_MINUTE_IN_SECONDS
