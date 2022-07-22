@@ -19,13 +19,12 @@ def humanize_time(total_seconds: float) -> str:
     return return_str
 
 def time_this_function(function: callable) -> callable:
-    def wrapper(*args, **kwargs) -> callable:
+    def wrapper(*args, **kwargs):
         import time
         start = time.time()
         result = function(*args, **kwargs)
         end = time.time()
-        print(f"{function.__name__} took {end - start} seconds")
-        print(humanize_time(end - start))
+        print(f"{function.__name__} took", humanize_time(end - start))
         return result
     return wrapper
 
