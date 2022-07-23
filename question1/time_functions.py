@@ -1,4 +1,7 @@
 def humanize_time(total_seconds: float) -> str:
+    """
+    Converts a time in seconds to a human-readable string.
+    """
     return_str = ""
     ONE_HOUR_IN_SECONDS = 3600
     ONE_MINUTE_IN_SECONDS = 60
@@ -19,6 +22,9 @@ def humanize_time(total_seconds: float) -> str:
     return return_str
 
 def time_this_function(function: callable) -> callable:
+    """
+    Decorator that times the execution of a function.
+    """
     def wrapper(*args, **kwargs):
         import time
         start = time.time()
