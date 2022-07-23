@@ -1,10 +1,10 @@
-* For this question, we needed to create a project containing three models
+For this question, we needed to create a project containing three models
 
     * A model for products
     * A model for catalogs
     * A model for buyers
 
-** As descripted in the question, the models should have some relationships between them. There is N products, a catalog has N products and products can be in M catalogs, so we have created an N:M table. A buyer has a catalog foreign key. These conditions are represented in the diagram below.
+ As descripted in the question, the models should have some relationships between them. There is N products, a catalog has N products and products can be in M catalogs, so we have created an N:M table. A buyer has a catalog foreign key. These conditions are represented in the diagram below.
 
 ![Relationships](https://raw.githubusercontent.com/lopes05/projectwastenot_challenge/master/question2/db_modeling.jpeg)
     
