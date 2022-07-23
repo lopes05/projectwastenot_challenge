@@ -13,7 +13,7 @@ If we needed to query products that can be shown to an user with a catalog, we c
 
 ```sql
 SELECT DISTINCT (p.id, p.name, p.price, p.visibility) as products_result FROM product p
-INNER JOIN catalog_product cp ON cp.product_id = p.id or p.visibility = 'default'
-INNER JOIN buyer b on b.catalog_id = cp.catalog_id
-WHERE b.id = $1;
+LEFT JOIN catalog_product cp ON cp.product_id = p.id
+INNER JOIN buyer b on b.catalog_id = cp.catalog_id or p.visibility = 'default'
+WHERE b.id = 1;
 ```
